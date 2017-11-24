@@ -1,4 +1,9 @@
-const Task = require('./Task');
+// 2 way to implement same thing
+// Using a class
+const Task = require('./Class');
+
+// Using Object & prototype
+// const Task = require('./Task');
 
 var eat = new Task('Eat food');
 var bath = new Task('Clean and bath');
