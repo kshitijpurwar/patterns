@@ -1,7 +1,8 @@
 // Constructor pattern
+const Repo = require('./taskRepo');
 
-var Task = function(name){
-  this.name = name;
+var Task = function(data){
+  this.name = data.name;
   this.done = false;
   // Functions are recreated each time so we will use prototypes
   this.do = function(){
@@ -9,7 +10,8 @@ var Task = function(name){
     console.log('Completing task - ' + this.name);
   }
   this.save = function(){
-    console.log('Saving task ' + this.name);
+    Repo.save(this);
+    // console.log('Saving task ' + this.name);
   }
 }
 
